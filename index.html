@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment 4 — Forms and Validation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#top">Forms &amp; Validation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#task0">Task 0</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#task1">Task 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#task2">Task 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#task3">Task 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#task4">Task 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="top" class="hero text-center">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Assignment #4</h1>
+            <p class="lead mb-1">Forms and Validation</p>
+            <p class="text-muted">HTML5 Built-in Validation · Bootstrap 5 Forms · Bootstrap Validation Classes</p>
+        </div>
+    </header>
+
+    <main class="container pb-5">
+
+        <section id="task0" class="task-section">
+            <h2 class="section-title">Task 0 — Simple Contact Form</h2>
+            <p class="text-muted">A basic HTML form. Every input has a proper <code>&lt;label&gt;</code> element linked with <code>for</code> and <code>id</code>.</p>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="t0-name" class="form-label">Name</label>
+                            <input type="text" id="t0-name" name="name" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="t0-email" class="form-label">Email</label>
+                            <input type="email" id="t0-email" name="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="t0-message" class="form-label">Message</label>
+                            <textarea id="t0-message" name="message" rows="4" class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="task1" class="task-section">
+            <h2 class="section-title">Task 1 — Form with HTML5 Validation</h2>
+            <p class="text-muted">Built-in validation attributes: <code>required</code>, <code>type="email"</code>, <code>minlength</code>, <code>maxlength</code>. The browser blocks submission and shows native tooltips until the data is valid.</p>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="t1-name" class="form-label">Name</label>
+                            <input type="text" id="t1-name" name="name" class="form-control" required minlength="2" maxlength="50" placeholder="Enter your full name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="t1-email" class="form-label">Email</label>
+                            <input type="email" id="t1-email" name="email" class="form-control" required maxlength="100" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="t1-message" class="form-label">Message</label>
+                            <textarea id="t1-message" name="message" rows="4" class="form-control" required minlength="10" maxlength="300" placeholder="Write at least 10 characters (max 300)"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="task2" class="task-section">
+            <h2 class="section-title">Task 2 — Bootstrap Form Styling</h2>
+            <p class="text-muted">The contact form recreated with Bootstrap 5 form classes and the grid system. Includes placeholders and helper text.</p>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form action="#" method="post">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="t2-name" class="form-label">Full Name</label>
+                                <input type="text" id="t2-name" name="name" class="form-control form-control-lg" placeholder="Tugenshe Palensheyev">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="t2-email" class="form-label">Email</label>
+                                <input type="email" id="t2-email" name="email" class="form-control form-control-lg" placeholder="palensheyev@example.com" aria-describedby="t2-email-help">
+                                <div id="t2-email-help" class="form-text">We will never share your email with anyone else.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="t2-message" class="form-label">Message</label>
+                                <textarea id="t2-message" name="message" rows="4" class="form-control" placeholder="How can we help you?"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg px-4">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="task3" class="task-section">
+            <h2 class="section-title">Task 3 — Bootstrap Validation Styles</h2>
+            <p class="text-muted">The <code>is-valid</code> and <code>is-invalid</code> classes display green or red borders with feedback messages ("Looks good!" / "Email is required"). Vanilla JavaScript intercepts submission and triggers the validation states.</p>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form id="validatedContactForm" class="needs-validation" action="#" method="post" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="t3-name" class="form-label">Name</label>
+                                <input type="text" id="t3-name" name="name" class="form-control" required minlength="2" placeholder="Tugenshe Palensheyev">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Name is required (min 2 characters).</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="t3-email" class="form-label">Email</label>
+                                <input type="email" id="t3-email" name="email" class="form-control" required placeholder="palensheyev@example.com">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Please provide a valid email address.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="t3-message" class="form-label">Message</label>
+                                <textarea id="t3-message" name="message" rows="4" class="form-control" required minlength="10" placeholder="Write at least 10 characters"></textarea>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Message is required (min 10 characters).</div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-success btn-lg px-4">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="task4" class="task-section">
+            <h2 class="section-title">Task 4 — Registration Form</h2>
+            <p class="text-muted">A complete registration form using the Bootstrap Grid (responsive), HTML5 validation, Bootstrap validation feedback, and password confirmation matching.</p>
+            <div class="card shadow-sm border-primary">
+                <div class="card-body p-4">
+                    <h3 class="h5 mb-3 text-primary">Create your account</h3>
+                    <form id="registrationForm" class="needs-validation" action="#" method="post" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="reg-firstname" class="form-label">First Name</label>
+                                <input type="text" id="reg-firstname" name="firstname" class="form-control" required minlength="2" maxlength="50" placeholder="Tugenshe">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">First name is required (min 2 characters).</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="reg-lastname" class="form-label">Last Name</label>
+                                <input type="text" id="reg-lastname" name="lastname" class="form-control" required minlength="2" maxlength="50" placeholder="Palensheyev">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Last name is required (min 2 characters).</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="reg-email" class="form-label">Email</label>
+                                <input type="email" id="reg-email" name="email" class="form-control" required maxlength="100" placeholder="palensheyev@example.com">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Please provide a valid email address.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="reg-password" class="form-label">Password</label>
+                                <input type="password" id="reg-password" name="password" class="form-control" required minlength="8" maxlength="64" placeholder="Minimum 8 characters">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Password must be at least 8 characters long.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="reg-confirm" class="form-label">Confirm Password</label>
+                                <input type="password" id="reg-confirm" name="confirm" class="form-control" required placeholder="Repeat your password">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Passwords do not match.</div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label d-block">Gender</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="gender-male" value="male" required>
+                                    <label class="form-check-label" for="gender-male">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="gender-female" value="female" required>
+                                    <label class="form-check-label" for="gender-female">Female</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="gender-other" value="other" required>
+                                    <label class="form-check-label" for="gender-other">Other</label>
+                                </div>
+                                <div class="invalid-feedback d-block">Please select your gender.</div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label d-block">Hobbies</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="hobbies" id="hobby-reading" value="reading">
+                                    <label class="form-check-label" for="hobby-reading">Reading</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="hobbies" id="hobby-sports" value="sports">
+                                    <label class="form-check-label" for="hobby-sports">Sports</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="hobbies" id="hobby-music" value="music">
+                                    <label class="form-check-label" for="hobby-music">Music</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="hobbies" id="hobby-travel" value="travel">
+                                    <label class="form-check-label" for="hobby-travel">Travel</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="reg-country" class="form-label">Country</label>
+                                <select id="reg-country" name="country" class="form-select" required>
+                                    <option value="" selected disabled>Select your country</option>
+                                    <option value="kz">Kazakhstan</option>
+                                    <option value="us">United States</option>
+                                    <option value="uk">United Kingdom</option>
+                                    <option value="de">Germany</option>
+                                    <option value="tr">Turkey</option>
+                                    <option value="jp">Japan</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="valid-feedback
